@@ -104,12 +104,10 @@
     <main class="container">
         <section class="cheatsheet-section">
             <h2 class="collapsible-header">
-                Building the Complete Static UI
+                1. Swift & SwiftUI Fundamentals
                 <span class="collapse-icon"></span>
             </h2>
             <div class="collapsible-content">
-                
-                <h3 class="subsection-title">1. Swift & SwiftUI Kickstart: The Bare Essentials (10:20 - 11:00)</h3>
                 <div class="grid-container">
                     <div class="card">
                         <h3>1. Displaying Static Text</h3>
@@ -302,7 +300,7 @@
                     </div>
 
                     <div class="card">
-<h3>15. State & Actions</h3>
+                        <h3>15. State & Actions</h3>
                         <p>Use <code>@State</code> to store a value that can change. A <code>Button</code> can change that value, and SwiftUI will automatically update the view.</p>
                         <pre><code><span class="keyword">struct</span> <span class="type">ContentView</span>: <span class="type">View</span> {
     <span class="property-wrapper">@State</span> <span class="keyword">var</span> tapCount <span class="operator">=</span> <span class="number">0</span>
@@ -318,7 +316,7 @@
 }</code></pre>
                     </div>
                     <div class="card">
-<h3>16. onTapGesture { ... }</h3>
+                        <h3>16. onTapGesture { ... }</h3>
                         <p>Makes any view tappable. Code inside the curly braces runs on tap.</p>
                         <pre><code><span class="keyword">struct</span> <span class="type">ContentView</span>: <span class="type">View</span> {
     <span class="property-wrapper">@State</span> <span class="keyword">var</span> tapCount <span class="operator">=</span> <span class="number">0</span>
@@ -335,7 +333,7 @@
 }</code></pre>
                     </div>
                     <div class="card">
-<h3>17. Animation</h3>
+                        <h3>17. Animation</h3>
                         <p>Smoothly animates changes with <code>withAnimation()</code> when the watched <code>@State</code> variable updates.</p>
                         <pre><code><span class="keyword">struct</span> <span class="type">ContentView</span>: <span class="type">View</span> {
     <span class="property-wrapper">@State</span> <span class="keyword">var</span> tapCount <span class="operator">=</span> <span class="number">0</span>
@@ -354,8 +352,16 @@
 }</code></pre>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <h3 class="subsection-title">2. Hands-On Part 1: Building the Complete Static UI (11:00 - 12:00)</h3>
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                2. Building the Static User Interface
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <h3 class="subsection-title">Building the Profile View</h3>
                 <div class="grid-container">
                     <div class="card">
                         <h3>Step 0: Add a background color</h3>
@@ -454,11 +460,11 @@
 
         <section class="cheatsheet-section">
             <h2 class="collapsible-header">
-                Bringing It to Life
+                3. Bringing the App to Life with Interactivity
                 <span class="collapse-icon"></span>
             </h2>
             <div class="collapsible-content">
-                <h3 class="subsection-title">3. The "Magic Me" Oracle: Interactivity & State (1:30 - 2:30)</h3>
+                <h3 class="subsection-title">Creating the 'Magic Me' Oracle</h3>
                 <div class="grid-container">
                     <div class="card">
                         <h3>Step 1: The Data (An Array of Answers)</h3>
@@ -530,7 +536,7 @@
                     </div>
                 </div>
 
-                <h3 class="subsection-title">4. The Challenge & Showcase (2:30 - 3:15)</h3>
+                <h3 class="subsection-title">The 'Magic Me' Challenge</h3>
                 <div class="grid-container">
                     <div class="card">
                         <h3>🚀 Challenge: Forge Your "Magic Me" Masterpiece! 🎨</h3>
@@ -559,11 +565,11 @@
 
         <section class="cheatsheet-section">
             <h2 class="collapsible-header">
-                Final App Code
+                4. Final Application Code
                 <span class="collapse-icon"></span>
             </h2>
             <div class="collapsible-content">
-                <h3 class="subsection-title">Complete App Code (<code>ContentView.swift</code>) (Only look if you are really stuck)</h3>
+                <h3 class="subsection-title">Complete <code>ContentView.swift</code> Code</h3>
                 <div class="grid-container">
                     <div class="card" style="grid-column: 1 / -1;">
                         <h3>Complete <code>ContentView.swift</code></h3>
