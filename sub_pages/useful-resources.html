@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful Resources & Links - COSC3062</title>
+    <link rel="icon" href="../assets/images/rmit-logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/base-theme.css">
+    <link rel="stylesheet" href="../css/extended-header.css">
+    <link rel="stylesheet" href="../css/collapsible.css">
+    <link rel="stylesheet" href="../css/code-styles.css">
+    <style>
+        /* Page-specific styles for useful-resources.html */
+        .logo { /* Override from extended-header.css if needed */
+            height: 60px;
+        }
+        .university-name { /* Override from extended-header.css if needed */
+            font-size: 1.75rem;
+        }
+        header .intro { /* Override from extended-header.css if needed */
+            max-width: 700px;
+        }
+
+        .cheatsheet-section {
+            margin-bottom: 40px;
+        }
+
+        .cheatsheet-section > h2.collapsible-header { /* Style for the main collapsible header */
+            font-size: 2rem;
+            color: var(--heading-color);
+            margin-bottom: 20px; /* Applied when open */
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 600;
+        }
+        .cheatsheet-section > h2.collapsible-header.collapsed {
+            margin-bottom: 0; /* No bottom margin when section is collapsed */
+        }
+        
+        .subsection-title { /* Style for sub-headers within a collapsible section */
+            font-size: 1.6rem;
+            color: var(--heading-color);
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            opacity: 0.9;
+            padding-left: 10px; /* Indent slightly */
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .card { /* Override from base-theme.css if needed */
+            padding: 20px;
+        }
+
+        .card h3 { /* Title for the resource inside a card */
+            font-size: 1.2rem;
+        }
+        
+        .card p { /* Description text for the resource */
+            /* flex-grow: 1; from base-theme.css */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: var(--card-bg-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: var(--heading-color);
+            color: var(--card-bg-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="back-to-home-container">
+                <a href="../index.html" class="back-to-home-button">&larr; Back to Home</a>
+            </div>
+            <div class="university-branding">
+                <img src="https://sites.rmit.edu.au/artschoolgraduates/files/2022/10/rmit-logo-red.png" alt="RMIT University Logo" class="logo">
+                <span class="university-name">RMIT University</span>
+            </div>
+            <h1>Useful Resources <span>& Links</span></h1>
+            <p class="intro">Essential external tools and learning resources for iOS development. This collection includes design tools, color palettes, learning platforms, and AI assistance to support your iPhone software engineering journey.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header start-open">
+                Design & Development Tools
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Free Icons (Flaticon)</h3>
+                        <p>A massive database of free icons in PNG, SVG, EPS, PSD and BASE 64 formats. Perfect for finding icons for your app.</p>
+                        <a href="https://www.flaticon.com" target="_blank" class="button">Go to Flaticon</a>
+                    </div>
+                    <div class="card">
+                        <h3>Browse Emojis (Get Emoji)</h3>
+                        <p>Copy and paste any emoji. Great for adding a bit of fun and personality to your app's text.</p>
+                        <a href="https://getemoji.com/" target="_blank" class="button">Go to Get Emoji</a>
+                    </div>
+                    <div class="card">
+                        <h3>Online Image Editor (Pixlr X)</h3>
+                        <p>A powerful online photo editor. Use it for quick edits, adjustments, and filters for your images.</p>
+                        <a href="https://pixlr.com/x/" target="_blank" class="button">Go to Pixlr X</a>
+                    </div>
+                    <div class="card">
+                        <h3>Advanced Online Image Editor (Photopea)</h3>
+                        <p>Supports PSD, XCF, Sketch, XD and CDR formats. An excellent free alternative to Photoshop.</p>
+                        <a href="https://www.photopea.com/" target="_blank" class="button">Go to Photopea</a>
+                    </div>
+                    <div class="card">
+                        <h3>Color Palettes (Color Hunt)</h3>
+                        <p>Discover the newest hand-picked color palettes for your design projects.</p>
+                        <a href="https://colorhunt.co/" target="_blank" class="button">Go to Color Hunt</a>
+                    </div>
+                    <div class="card">
+                        <h3>Free Stock Photos (Unsplash)</h3>
+                        <p>The internet's source of freely-usable images. Powered by creators everywhere.</p>
+                        <a href="https://unsplash.com/" target="_blank" class="button">Go to Unsplash</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header start-open">
+                Learning Resources
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>100 Days of SwiftUI</h3>
+                        <p>A free collection of videos, tutorials, tests, and more, that teaches you SwiftUI from scratch.</p>
+                        <a href="https://www.hackingwithswift.com/100/swiftui" target="_blank" class="button">Go to 100 Days of SwiftUI</a>
+                    </div>
+                    <div class="card">
+                        <h3>100 Days of Swift</h3>
+                        <p>A free collection of videos, tutorials, tests, and more, that teaches you Swift from scratch.</p>
+                        <a href="https://www.hackingwithswift.com/100" target="_blank" class="button">Go to 100 Days of Swift</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header start-open">
+                AI Assistance Tools
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>ChatGPT</h3>
+                        <p>An AI-powered chatbot to help you with coding questions, debugging, and creative ideas.</p>
+                        <a href="https://chat.openai.com/" target="_blank" class="button">Go to ChatGPT</a>
+                    </div>
+                    <div class="card">
+                        <h3>Gemini</h3>
+                        <p>A powerful AI from Google for brainstorming, coding assistance, and exploring new concepts.</p>
+                        <a href="https://gemini.google.com/" target="_blank" class="button">Go to Gemini</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Created by Tom Huynh with love ❤️</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
+</body>
+</html>
