@@ -1,5 +1,8 @@
 # COSC3062 - iPhone Software Engineering Guide 📱
 
+## 🌐 Live Website
+**Access the complete guide at:** https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/
+
 Welcome to your comprehensive learning companion for iOS development! This guide will support you throughout your journey in mastering iPhone app development using Swift and SwiftUI.
 
 ## 🎯 What You'll Master
@@ -38,10 +41,10 @@ This course introduces all facets of application development on mobile computing
 ## 🚀 How to Use This Guide
 
 ### **📖 Main Resources**
-- **[Step-by-Step Tutorial](sub_pages/bootcamp-guide.html)** - Build your first "Magic Me" app
-- **[Swift & SwiftUI Reference](sub_pages/swift-swiftui-cheatsheet.html)** - Quick lookup for syntax and concepts
-- **[Asset Gallery](sub_pages/asset-gallery.html)** - Download images, sounds, and icons for your projects
-- **[Learning Resources](sub_pages/useful-resources.html)** - External tools and platforms
+- **[Step-by-Step Tutorial](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/sub_pages/bootcamp-guide.html)** - Build your first "Magic Me" app
+- **[Swift & SwiftUI Reference](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/sub_pages/swift-swiftui-cheatsheet.html)** - Quick lookup for syntax and concepts
+- **[Asset Gallery](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/sub_pages/asset-gallery.html)** - Download images, sounds, and icons for your projects
+- **[Learning Resources](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/sub_pages/useful-resources.html)** - External tools and platforms
 
 ### **🎯 Getting Started**
 1. **Start with the Tutorial** - Follow the Magic Me app guide to get hands-on experience
@@ -169,10 +172,10 @@ Advanced interactive development:
 
 ## 🚀 Ready to Start?
 
-1. **Visit the [Main Guide](index.html)** to access all resources
-2. **Begin with the [Magic Me Tutorial](sub_pages/bootcamp-guide.html)**
-3. **Keep the [Cheatsheet](sub_pages/swift-swiftui-cheatsheet.html) handy**
-4. **Download assets from the [Gallery](sub_pages/asset-gallery.html)**
+1. **Visit the [Main Guide](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/)** to access all resources
+2. **Begin with the [Magic Me Tutorial](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/sub_pages/bootcamp-guide.html)**
+3. **Keep the [Cheatsheet](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/sub_pages/swift-swiftui-cheatsheet.html) handy**
+4. **Download assets from the [Gallery](https://tomhuynhsg.github.io/COSC3062-iOS-Software-Engineering-Guide/sub_pages/asset-gallery.html)**
 
 **Happy Coding!** 🎉
 
