@@ -116,6 +116,17 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        .main-section-header {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .main-section-header h2 {
+            font-size: 2rem;
+            color: var(--heading-color);
+        }
     </style>
 </head>
 <body>
@@ -136,6 +147,82 @@
     </header>
 
     <main class="container">
+        <section class="cheatsheet-section" id="start-with-playgrounds">
+            <h2 class="collapsible-header">
+                Start with Playgrounds for SwiftUI
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="grid-container" style="grid-template-columns: 1fr;">
+                    <div class="card instruction-step">
+                        <h3>Step 1: Create a New Playground</h3>
+                        <p><strong>Instruction:</strong> First, open the Swift Playgrounds application. From the top menu bar, click on "File" and then select "New Book" (or "New Playground") to create a new project. A new playground file, typically named "My Playground," will appear. Click on it to open and start coding.</p>
+                        <img src="../assets/intruction_imgs/Start with Playgrounds - Step 1.png" alt="Start with Playgrounds - Step 1" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 2: Write and Run Your Code</h3>
+                        <p><strong>Instruction:</strong> Once your new playground is open, you can begin entering your Swift code in the main editor window. To see the output of your code, click the "Run My Code" button. The results will be displayed in the console or preview area.</p>
+                        <img src="../assets/intruction_imgs/Start with Playgrounds - Step 2.png" alt="Start with Playgrounds - Step 2" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 3: Organize Your Work with Pages</h3>
+                        <p><strong>Instruction:</strong> To keep your code organized, especially when working on different problems or sections, you can create new pages. Click the sidebar icon to view your pages. You can add a new page for each new question or part of your project. This allows you to manage your code in a structured way.</p>
+                        <img src="../assets/intruction_imgs/Start with Playgrounds - Step 3.png" alt="Start with Playgrounds - Step 3">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 4: Navigate Between Playgrounds</h3>
+                        <p><strong>Instruction:</strong> If you need to go back to the main menu to see all of your Playground files, go to the "Window" tab in the top menu bar and select "My Playgrounds". This will take you back to the screen where all your saved playgrounds are listed.</p>
+                        <img src="../assets/intruction_imgs/Start with Playgrounds - Step 4.png" alt="Start with Playgrounds - Step 4" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 5: Share Your Playground</h3>
+                        <p><strong>Instruction:</strong> When you want to share your entire Swift Playground file, which includes all the pages and code you've created, navigate to the "My Playgrounds" main menu. Right-click (or control-click) on the playground file you wish to share, and from the context menu, select "Share". You can then choose your preferred method, such as AirDrop or Email.</p>
+                        <img src="../assets/intruction_imgs/Start with Playgrounds - Step 5.png" alt="Start with Playgrounds - Step 5" class="img-large">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="cheatsheet-section" id="troubleshoot-with-playgrounds">
+            <h2 class="collapsible-header">
+                Troubleshoot with Playgrounds
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="grid-container" style="grid-template-columns: 1fr;">
+                    <div class="card instruction-step">
+                        <h3>Step 1: Identify the Error</h3>
+                        <p><strong>Description:</strong> Sometimes, you may encounter an error that prevents the app preview from loading, such as being "Unable to delete the contents of ExecutionExtension's container."</p>
+                        <p><strong>Instruction:</strong> Click the red error icon in the top right of the code editor to see the specific error message.</p>
+                        <img src="../assets/intruction_imgs/Troubleshoot with Playgrounds - Step 1 .jpg" alt="Troubleshoot with Playgrounds - Step 1" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 2: Quit Swift Playgrounds</h3>
+                        <p><strong>Description:</strong> To begin troubleshooting, you must first completely close the application.</p>
+                        <p><strong>Instruction:</strong> Right-click on the Swift Playgrounds icon in your Mac's Dock and select Quit.</p>
+                        <img src="../assets/intruction_imgs/Troubleshoot with Playgrounds - Step 2.jpg" alt="Troubleshoot with Playgrounds - Step 2">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 3: Open Self Service</h3>
+                        <p><strong>Description:</strong> You will use a utility called Self Service, provided by RMIT ITS, to run a troubleshooting script.</p>
+                        <p><strong>Instruction:</strong> Click the RMIT icon in the top menu bar, then click the Self Service button to launch the application.</p>
+                        <img src="../assets/intruction_imgs/Troubleshoot with Playgrounds - Step 3.jpg" alt="Troubleshoot with Playgrounds - Step 3">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 4: Clear the Swift Playground Cache</h3>
+                        <p><strong>Description:</strong> A common fix for this specific error is to clear the application's cached data, which can become corrupted.</p>
+                        <p><strong>Instruction:</strong> In Self Service, click Browse and then All. Find the "Delete Swift Playground Cache" option and click the Run button.</p>
+                        <img src="../assets/intruction_imgs/Troubleshoot with Playgrounds - Step 4.jpg" alt="Troubleshoot with Playgrounds - Step 4" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 5: Verify the Fix</h3>
+                        <p><strong>Description:</strong> After the cache has been cleared, you can reopen your project to confirm that the issue is resolved.</p>
+                        <p><strong>Instruction:</strong> Launch Swift Playgrounds again and open your app. The app should now build successfully and display correctly in the live preview.</p>
+                        <img src="../assets/intruction_imgs/Troubleshoot with Playgrounds - Step 5.png" alt="Troubleshoot with Playgrounds - Step 5" class="img-large">
+                    </div>
+                </div>
+            </div>
+        </section> -->
         <section class="cheatsheet-section">
             <h2 class="collapsible-header start-open">
                 Question 0. String Interpolation 📝
