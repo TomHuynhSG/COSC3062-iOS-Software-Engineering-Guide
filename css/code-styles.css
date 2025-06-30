@@ -87,3 +87,8 @@ code { /* For inline code and code within pre blocks */
     font-size: 1rem;
     color: var(--text-color); /* Use general text color for output box content */
 }
+
+.user-input {
+    color: #82aaff; /* A light blue color for visibility */
+    font-weight: bold;
+}

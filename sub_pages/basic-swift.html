@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Swift Guide - COSC3062</title>
+    <link rel="icon" href="../assets/images/rmit-logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/base-theme.css">
+    <link rel="stylesheet" href="../css/extended-header.css">
+    <link rel="stylesheet" href="../css/collapsible.css">
+    <link rel="stylesheet" href="../css/code-styles.css">
+    <style>
+        /* Page-specific styles for bootcamp-snippets.html */
+        .logo { /* Override from extended-header.css if needed */
+            height: 60px;
+        }
+        .university-name { /* Override from extended-header.css if needed */
+            font-size: 1.75rem;
+        }
+        header .intro { /* Override from extended-header.css if needed */
+            max-width: 700px;
+        }
+
+        .cheatsheet-section {
+            margin-bottom: 40px;
+        }
+
+        .cheatsheet-section > h2.collapsible-header { /* Style for the main collapsible header */
+            font-size: 2rem;
+            color: var(--heading-color);
+            margin-bottom: 20px; /* Applied when open */
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 600;
+        }
+        .cheatsheet-section > h2.collapsible-header.collapsed {
+            margin-bottom: 0; /* No bottom margin when section is collapsed */
+        }
+        
+        .subsection-title { /* Style for sub-headers within a collapsible section */
+            font-size: 1.6rem;
+            color: var(--heading-color);
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            opacity: 0.9;
+            padding-left: 10px; /* Indent slightly */
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 20px;
+        }
+
+        .card { /* Override from base-theme.css if needed */
+            padding: 20px;
+        }
+
+        .card h3 { /* Title for the code snippet/step inside a card */
+            font-size: 1.2rem;
+        }
+        
+        .card p { /* Description text for the snippet */
+            /* flex-grow: 1; from base-theme.css */
+        }
+        
+        pre { /* Override from code-styles.css if needed */
+            margin-bottom: 10px; /* Reduced margin for snippets */
+        }
+
+        /* Inline code styling, if not covered by global code in code-styles.css */
+        body code:not(pre code) { 
+            font-family: "Fira Code", "Courier New", monospace;
+            background-color: var(--bg-color); /* Match page background */
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: var(--text-color); /* Ensure contrast */
+        }
+
+        .challenge-criteria li {
+            margin-bottom: 10px;
+        }
+
+        .instruction-step img {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+        .instruction-step.card {
+            padding: 20px;
+        }
+        /* Instruction Step Styling */
+        .instruction-step {
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .instruction-step h3 {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .card img.img-large {
+            max-width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="back-to-home-container">
+                <a href="../index.html" class="back-to-home-button">&larr; Back to Home</a>
+            </div>
+            <div class="university-branding">
+                <img src="https://sites.rmit.edu.au/artschoolgraduates/files/2022/10/rmit-logo-red.png" alt="RMIT University Logo" class="logo">
+                <span class="university-name">RMIT University</span>
+            </div>
+            <h1>Basic Swift <span>Step by Step Guide</span></h1>
+            <p class="intro">The goal of our first lab is to give you a sense of Swift, a new language you'll need to master. This one covers the basics, including variables and control flow, methods and properties, arrays and strings, but keep in mind that Swift handles some of the basics in a very powerful way which you will learn later.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header start-open">
+                Question 0. String Interpolation 📝
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question0a.png" alt="Question 0a" class="card-img">
+                    <h3>Description</h3>
+                    <p>For this first question, you only need to learn how to combine strings together and prints it out to the screen:</p>
+                    <pre><code><span class="keyword">let</span> myName <span class="operator">=</span> <span class="string">"Jerry"</span>  <span class="comment">// You can change it to your name</span>
+<span class="keyword">let</span> myAnimals <span class="operator">=</span> <span class="string">"Koala 🐨, Snail 🐌, Penguin 🐧"</span> <span class="comment">// You can change it</span>
+<span class="keyword">let</span> animalCount <span class="operator">=</span> <span class="number">3</span> <span class="comment">// You can change it</span>
+
+<span class="comment">//Complete your code so it will print you love these number of animals by</span>
+<span class="comment">//combining these constants into a string and display it</span></code></pre>
+                    <h3>Sample Outputs (yours can be different):</h3>
+                    <pre><code>Jerry loves all 3 of animals like Koala 🐨, Snail 🐌, Penguin 🐧</code></pre>
+                    <p>Btw, to use emoji keyboard on MacOS: Press the Control + Command + Spacebar keys on your keyboard at the same time then you should see this emoji keyboard. Have fun!</p>
+                    <img src="../assets/guide_imgs/basic_swift/Question0b.png" alt="Question 0b" class="card-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                Question 1. If Else conditionals 🤔
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question1.png" alt="Question 1" class="card-img">
+                    <h3>Description</h3>
+                    <p>Complete the function “checkDivisible” below to check if a given variable is a positive integer and checks to see if it can be divided by both 5 and 6 or simply one of them, neither, or both. When the user types a negative integer or 0, the code prints out “it is not a valid number".</p>
+                    <pre><code><span class="keyword">let</span> myNumber <span class="operator">=</span> <span class="number">4</span>
+
+<span class="keyword">func</span> <span class="function">checkDivisible</span>(aNumber: <span class="type">Int</span>) <span class="operator">-></span> <span class="type">String</span>{
+   <span class="comment">// Please complete the function body</span>
+
+
+}
+
+<span class="keyword">let</span> result <span class="operator">=</span> checkDivisible(aNumber: myNumber)
+print(result)</code></pre>
+                    <h3>Sample outputs (only 4 possible outcomes as following):</h3>
+                    <pre><code>30 is divisible by both 5 and 6.
+ 
+10 is divisible by 5 or 6, but not both.
+ 
+4 is neither divisible.
+ 
+-10 is not a valid number</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                Question 2. Loop 🔄
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question2.png" alt="Question 2" class="card-img">
+                    <h3>Description</h3>
+                    <p>Given the array of numbers. Create another array called computedNumbers. computedNumbers should multiply each element in the numbers array by the next element. The last element should be multiplied by the first.</p>
+                    <p>e.g. If numbers was equal to: <code>[3, 1, 4, 2]</code></p>
+                    <p>computedNumbers should equal <code>[3 x 1, 1 x 4, 4 x 2, 2 x 3]</code> which is: <code>[3, 4, 8, 6]</code></p>
+                    <p>Replace the comments with your code.</p>
+                    <pre><code><span class="keyword">let</span> numbers <span class="operator">=</span> [<span class="number">45</span>, <span class="number">73</span>, <span class="number">195</span>, <span class="number">53</span>]
+ 
+<span class="comment">//Write your code here (you can do it with or without a function)</span>
+ 
+ 
+ 
+<span class="keyword">let</span> computedNumbers <span class="operator">=</span> <span class="comment">//Replace this comment with your code.</span>
+ 
+print(computedNumbers)</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                Question 3. Print & Loop 🖼️
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question3.png" alt="Question 3" class="card-img">
+                    <h3>Description</h3>
+                    <p>Complete the function “drawRectangle” to print out a Rectangle which has a width and a height. A visualize method to display the rectangle using * symbol</p>
+                    <pre><code><span class="keyword">let</span> width <span class="operator">=</span> <span class="number">8</span>
+<span class="keyword">let</span> height <span class="operator">=</span> <span class="number">3</span>
+
+print(<span class="string">"Current width: \(width)"</span>);
+print(<span class="string">"Current height: \(height)"</span>);
+
+<span class="keyword">func</span> <span class="function">drawRectangle</span>(givenWidth: <span class="type">Int</span>, givenHeight: <span class="type">Int</span>) {
+   <span class="comment">// Complete the function body</span>
+
+   
+}
+
+drawRectangle(givenWidth: width, givenHeight: height)</code></pre>
+                    <h3>Sample Outputs</h3>
+                    <pre><code>Current width: 8
+Current height: 3
+********
+********
+********
+
+Current width: 2
+Current height: 2
+**
+**
+
+Current width: 1
+Current height: 3
+*
+*
+*</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                Question 4. Function 🧮
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question4.png" alt="Question 4" class="card-img">
+                    <h3>Description</h3>
+                    <p>You're going to make a simple calculator. You'll need to write 4 functions such that a and b are added, subtracted, multiplied, and divided by each other when the code is run. It will request certain input values from you. The values must be numbers, and they will be substituted as variables a and b in your code. Separate lines will be required for the numbers.</p>
+                    <p>If a = 3 and b = 4, This is what you would expect to be printed from the calculator:</p>
+                    <pre><code>7
+-1
+12
+0.75</code></pre>
+                    <p>Because: 3 + 4 = 7, 3 - 4 = -1, 3 x 4 = 12, 3 ÷ 4 = 0.75</p>
+                    <pre><code><span class="keyword">let</span> a <span class="operator">=</span> <span class="number">5.0</span>
+<span class="keyword">let</span> b <span class="operator">=</span> <span class="number">6.0</span>
+
+<span class="comment">// Write your code here to define 4 functions as requested</span>
+
+
+
+<span class="comment">//To make the function calls below work, please write 4 functions above</span>
+print(add(n1: a, n2: b))
+print(subtract(n1: a, n2: b))
+print(multiply(n1: a, n2: b))
+print(divide(n1: a, n2: b))</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                Question 5. Array 🔺
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question5a.png" alt="Question 5a" class="card-img">
+                    <h3>Description</h3>
+                    <p>Write your code to have 3 side lengths of a triangle in an array and print out the type of the triangle which has 4 possibilities: Not Triangle, Equilateral, Isosceles or Scalene. Hint:</p>
+                    <img src="../assets/guide_imgs/basic_swift/Question5b.png" alt="Question 5b" class="card-img">
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 5px;">
+                        <li>To check if lengths of three sides to make a triangle: <a href="https://www.wikihow.com/Determine-if-Three-Side-Lengths-Are-a-Triangle" target="_blank">WikiHow Link</a></li>
+                        <li>Equilateral Triangle: has three sides of the same length</li>
+                        <li>Isosceles Triangle: has two sides of equal length</li>
+                        <li>Scalene Triangle: has all its sides of different lengths.</li>
+                    </ul>
+                    <pre><code><span class="keyword">let</span> sizes <span class="operator">=</span> [<span class="number">3</span>, <span class="number">6</span>, <span class="number">100</span>]
+ 
+<span class="comment">// Complete your code below (print out sizes and classify the triangle)</span></code></pre>
+                    <h3>Sample Outputs</h3>
+                    <pre><code>The three sizes of the triangle are: 3, 6, 100
+It is not a Triangle
+
+The three sizes of the triangle are: 6, 6, 9
+It is an Isosceles Triangle
+
+The three sizes of the triangle are: 25, 25, 25
+It is an Equilateral Triangle
+
+The three sizes of the triangle are: 3, 4, 5
+It is a Scalene Triangle</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                Question 6. For big and small Dice Game (tai sai/dai siu/high low) 🎲
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question6a.png" alt="Question 6a" class="card-img">
+                    <h3>Description</h3>
+                    <p>During Tet holiday, big and small is a very popular dice game to play. It’s a game of pure chance that moves quickly. There’s no strategy or skill involved. Also, this kind of game is played all over the world. You will try to implement the simple version of the dai siu game.</p>
+                    <p>A normal dice got 6 numbers from 1 to 6. So there are two parties: the house (nhà cái - Tom) and the player (you). At the beginning of any round, you will put what you want to bet. The house will roll 3 dice at the same time. The result will be hidden from you until you pick your choice. The player will pick either Big (Tài) or Small (Xỉu).</p>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 5px;">
+                        <li><b>Scenario 1:</b> The sum of 3 dice being from 4 to 10: You will win the amount you have bet if you choose Small. Otherwise, you will lose, the house will take your bet.</li>
+                        <li><b>Scenario 2:</b> The sum of 3 dice being from 11 to 17: You will win the amount you have bet if you choose Big. Otherwise, you will lose, the house will take your bet.</li>
+                        <li><b>Scenario 3:</b> If all numbers of each dice are the same like (1, 1, 1) or (4, 4, 4) then you will lose regardless of what you pick, Big or Small.</li>
+                    </ul>
+                    <p>Two parties can start with any money (usually you have much less). The player can keep playing until either the house or the player runs out of money. Please try your luck to win all the money for the house.</p>
+                    <img src="../assets/guide_imgs/basic_swift/Question6b.png" alt="Question 6b" class="card-img">
+                    <h3>Sample Outputs (yours can be different):</h3>
+                    <pre><code>The house has $1000
+The player has $100
+Try your luck to win all money of the house!
+Round 1:
+How much do you want to bet?
+<span class="user-input">40</span>
+You have bet $40!
+Do you want to bet big or small?(big/small)
+<span class="user-input">big</span>
+The dices are: 5 4 3
+The sum of 3 dices is 12!
+You Won $40!
+The house has $960
+The player has $140
+Do you still want to continue to play?(true/false)
+<span class="user-input">true</span>
+Round 2:
+How much do you want to bet?
+<span class="user-input">200</span>
+You bet more than what in your wallet! Try again!
+How much do you want to bet?
+<span class="user-input">120</span>
+You have bet $120!
+Do you want to bet big or small?(big/small)
+<span class="user-input">small</span>
+The dices are: 5 3 6
+The sum of 3 dices is 14!
+You Lost $120!
+The house has $1080
+The player has $20
+Do you still want to continue to play?(true/false)
+<span class="user-input">true</span>
+Round 3:
+How much do you want to bet?
+<span class="user-input">20</span>
+You have bet $20!
+Do you want to bet big or small?(big/small)
+<span class="user-input">big</span>
+The dices are: 6 1 5
+The sum of 3 dices is 12!
+You Won $20!
+The house has $1060
+The player has $40
+Do you still want to continue to play?(true/false)
+<span class="user-input">true</span>
+Round 4:
+How much do you want to bet?
+<span class="user-input">40</span>
+You have bet $40!
+Do you want to bet big or small?(big/small)
+<span class="user-input">small</span>
+The dices are: 2 4 1
+The sum of 3 dices is 7!
+You Won $40!
+The house has $1020
+The player has $80
+Do you still want to continue to play?(true/false)
+<span class="user-input">true</span>
+Round 5:
+How much do you want to bet?
+<span class="user-input">80</span>
+You have bet $80!
+Do you want to bet big or small?(big/small)
+<span class="user-input">big</span>
+The dices are: 1 5 2
+The sum of 3 dices is 8!
+You Lost $80!
+The house has $1100
+The player has $0
+You are out of money! Bye!</code></pre>
+                    <h3>Hints:</h3>
+                    <p>For this question, you need to use Xcode instead of Swift Playgrounds to read input from users so you must open Xcode to do this question.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheatsheet-section">
+            <h2 class="collapsible-header">
+                Question 7. Rabbit Family 🐇
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="card">
+                    <img src="../assets/guide_imgs/basic_swift/Question7a.png" alt="Question 7a" class="card-img">
+                    <h3>Description</h3>
+                    <p>A pair of rabbits (one male and one female) do not give birth until they are 2 months old. After 2 months old, each pair of rabbits gives birth to a pair of baby rabbits (including a male rabbit and a female rabbit) every month. How many pairs of rabbits are there after n months, and in the first month there is a pair of newborn rabbits?</p>
+                    <img src="../assets/guide_imgs/basic_swift/Question7b.png" alt="Question 7b" class="card-img">
+                    <p>In the above figure, we assume:</p>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 5px;">
+                        <li>A pair of brown rabbits is a pair of rabbits with an age of 1 month. (not ready to give birth)</li>
+                        <li>The highlighted rabbit pair (red and blue) is a fertile pair (ready to give birth).</li>
+                    </ul>
+                    <p>Looking at the figure above we see:</p>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 5px;">
+                        <li>1st and 2nd month: Only 1 pair of rabbits.</li>
+                        <li>The 3rd month: this pair of rabbits will give birth to a pair of baby rabbits, so this month there will be 2 pairs of rabbits.</li>
+                        <li>The 4th month: only the first pair of rabbits gave birth, so at this point there are 3 pairs of rabbits.</li>
+                        <li>5th month: there are two pairs of rabbits (the first pair and the rabbits are born in the third month) give birth together, so this month there are 2 + 3 = 5 pairs of rabbits.</li>
+                        <li>6th month: there are three pairs of rabbits (2 pairs of rabbits first and a pair of rabbits born in the fourth month)</li>
+                        <li>Both gave birth at this time, so here there are 3 + 5 = 8 pairs of rabbits.</li>
+                    </ul>
+                    <h3>Input</h3>
+                    <p>A positive integer n.</p>
+                    <h3>Output</h3>
+                    <p>Number of pairs of rabbits at month n</p>
+                    <h3>Example:</h3>
+                    <pre><code>numberOfRabbit(6)</code></pre>
+                    <p>The output will be “The total number of pairs of rabbits at the month 6 is 8.”</p>
+                    <h3>Fun fact about Australia 🇦🇺</h3>
+                    <p>This question is inspired by the real "rabbit disaster" in Australia, which caused the largest biological invasion in history. In 1859, Thomas Austin brought 24 wild rabbits to his estate in Victoria, Australia from the UK. However, rabbits are highly efficient breeders, with a single female capable of producing dozens of children in a year. By the 1920s, there were more than 10,000,000,000 (10 billion) rabbits across Australia in all states. That is how fast a rabbit can give birth! With this large number of rabbits, they cause significant damage to crops, pastures, and natural ecosystems in Australia.</p>
+                    <img src="../assets/guide_imgs/basic_swift/Question7c.png" alt="Question 7c" class="card-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Created by Tom Huynh with love ❤️</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
+</body>
+</html>

@@ -158,3 +158,12 @@ footer {
 .scroll-to-top-button:hover {
     background-color: var(--heading-color); /* Darken on hover */
 }
+
+.card-img {
+    width: 100%;
+    max-width: 60%;
+    margin: 15px auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
