@@ -83,6 +83,39 @@
         .challenge-criteria li {
             margin-bottom: 10px;
         }
+
+        .instruction-step img {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+        .instruction-step.card {
+            padding: 20px;
+        }
+        /* Instruction Step Styling */
+        .instruction-step {
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .instruction-step h3 {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .card img.img-large {
+            max-width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
@@ -102,6 +135,83 @@
     </header>
 
     <main class="container">
+        <section class="cheatsheet-section" id="start-with-xcode">
+            <h2 class="collapsible-header">
+                0. Start with Xcode for SwiftUI
+                <span class="collapse-icon"></span>
+            </h2>
+            <div class="collapsible-content">
+                <div class="grid-container" style="grid-template-columns: 1fr;">
+                    <div class="card instruction-step">
+                        <h3>Step 1: Open Xcode</h3>
+                        <p><strong>Description:</strong> Launch Xcode from Applications or using Spotlight Search to begin creating your SwiftUI project.</p>
+                        <p><strong>Instruction:</strong> Press Command + Space to open Spotlight Search, type "Xcode", and click on Xcode to launch the application. Alternatively, find Xcode in your Applications folder.</p>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 1.png" alt="Start with Xcode - Step 1" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 2: Create a New Project</h3>
+                        <p><strong>Description:</strong> Start a new Xcode project from the welcome screen to begin your SwiftUI development.</p>
+                        <p><strong>Instruction:</strong> From the Xcode welcome screen, click "Create a new Xcode project". If Xcode is already open, you can also use File > New > Project from the menu bar.</p>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 2.png" alt="Start with Xcode - Step 2" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 3: Choose iOS App Template</h3>
+                        <p><strong>Description:</strong> Select the appropriate template for iOS SwiftUI app development.</p>
+                        <p><strong>Instruction:</strong> In the template selection screen, make sure the "iOS" tab is selected at the top, then choose the "App" template from the Application section. Click "Next" to continue.</p>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 3.png" alt="Start with Xcode - Step 3" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 4: Configure Project Settings</h3>
+                        <p><strong>Description:</strong> Set up your project details and ensure SwiftUI is selected as the interface framework.</p>
+                        <p><strong>Instruction:</strong> Fill in the project configuration:</p>
+                        <ul style="list-style-type: disc; padding-left: 20px;">
+                            <li><strong>Product Name:</strong> Enter your app name (e.g., "MyFirstApp")</li>
+                            <li><strong>Team:</strong> Select your development team (if available)</li>
+                            <li><strong>Organization Identifier:</strong> Use reverse domain notation (e.g., com.yourname.myfirstapp)</li>
+                            <li><strong>Bundle Identifier:</strong> Auto-generated based on organization identifier and product name</li>
+                            <li><strong>Language:</strong> Swift</li>
+                            <li><strong>Interface:</strong> SwiftUI (Important! Make sure this is selected)</li>
+                            <li><strong>Use Core Data:</strong> Leave unchecked for beginners</li>
+                            <li><strong>Include Tests:</strong> Can be unchecked for simple projects</li>
+                        </ul>
+                        <p>Click "Next" when all settings are configured.</p>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 4.png" alt="Start with Xcode - Step 4" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 5: Choose Project Location</h3>
+                        <p><strong>Description:</strong> Select where to save your project on your Mac and set up version control.</p>
+                        <p><strong>Instruction:</strong> Choose a location to save your project (Desktop or Documents folder recommended). Ensure "Create Git repository on my Mac" is checked for version control. Click "Create" to finish setting up your project.</p>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 5.png" alt="Start with Xcode - Step 5" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 6: Understand the Xcode Interface</h3>
+                        <p><strong>Description:</strong> Familiarize yourself with the Xcode workspace layout for SwiftUI development.</p>
+                        <p><strong>Instruction:</strong> The Xcode interface consists of several key areas:</p>
+                        <ul style="list-style-type: disc; padding-left: 20px;">
+                            <li><strong>Navigator Area (Left):</strong> Browse project files, folders, and resources</li>
+                            <li><strong>Editor Area (Center):</strong> Write and edit your SwiftUI code</li>
+                            <li><strong>Canvas (Right):</strong> Live preview of your SwiftUI interface</li>
+                            <li><strong>Inspector Area (Far Right):</strong> View and modify properties and settings</li>
+                            <li><strong>Debug Area (Bottom):</strong> Console output and debugging tools</li>
+                            <li><strong>Toolbar (Top):</strong> Build, run, and stop controls</li>
+                        </ul>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 6.png" alt="Start with Xcode - Step 6" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 7: Enable Canvas Preview</h3>
+                        <p><strong>Description:</strong> Activate the live preview feature to see your SwiftUI code changes in real-time.</p>
+                        <p><strong>Instruction:</strong> In the Canvas area (right side), click the "Resume" button to start the live preview. If the Canvas is not visible, go to Editor > Canvas in the menu bar to show it. The preview will update automatically as you modify your SwiftUI code.</p>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 7.png" alt="Start with Xcode - Step 7" class="img-large">
+                    </div>
+                    <div class="card instruction-step">
+                        <h3>Step 8: Run Your First App</h3>
+                        <p><strong>Description:</strong> Build and run your default SwiftUI app in the iOS Simulator to see it in action.</p>
+                        <p><strong>Instruction:</strong> Click the Play button (▶️) in the toolbar or press Command + R to build and run your app. Xcode will launch the iOS Simulator and display your app. The default app shows "Hello, world!" text - this confirms your SwiftUI project is working correctly.</p>
+                        <img src="../assets/intruction_imgs/Start With Xcode - Step 8.png" alt="Start with Xcode - Step 8" class="img-large">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="cheatsheet-section">
             <h2 class="collapsible-header">
                 1. Swift & SwiftUI Fundamentals
