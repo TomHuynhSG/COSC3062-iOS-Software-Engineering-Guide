@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/extended-header.css">
     <link rel="stylesheet" href="../css/collapsible.css">
     <link rel="stylesheet" href="../css/code-styles.css">
+    <link rel="stylesheet" href="../css/shared-styles.css">
     <style>
         /* Page-specific styles for swift-swiftui-cheatsheet.html */
         .container {
@@ -23,10 +24,6 @@
         }
         header .intro { /* Override from extended-header.css if needed */
             /* max-width: 600px; from extended-header.css */
-        }
-
-        .cheatsheet-section {
-            margin-bottom: 40px;
         }
 
         .cheatsheet-section > h2.collapsible-header {
@@ -127,15 +124,6 @@
                 border-bottom: 1px solid #555;
                 color: var(--heading-color); /* Ensure text is readable */
             }
-        }
-        /* Inline code styling, if not covered by global code in code-styles.css */
-        body code:not(pre code) { 
-            font-family: "Fira Code", "Courier New", monospace;
-            background-color: var(--bg-color); 
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            color: var(--text-color);
         }
     </style>
 </head>
@@ -1424,6 +1412,6 @@ db.collection(<span class="string">"users"</span>).getDocuments() { (querySnapsh
             }
         });
     </script>
-    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
+    <button id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
 </body>
 </html>

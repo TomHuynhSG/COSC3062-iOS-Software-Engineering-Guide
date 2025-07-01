@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/extended-header.css">
     <link rel="stylesheet" href="../css/collapsible.css">
     <link rel="stylesheet" href="../css/code-styles.css">
+    <link rel="stylesheet" href="../css/shared-styles.css">
     <style>
         /* Page-specific styles for useful-resources.html */
         .logo { /* Override from extended-header.css if needed */
@@ -22,10 +23,6 @@
             max-width: 700px;
         }
 
-        .cheatsheet-section {
-            margin-bottom: 40px;
-        }
-
         .cheatsheet-section > h2.collapsible-header { /* Style for the main collapsible header */
             font-size: 2rem;
             color: var(--heading-color);
@@ -34,21 +31,7 @@
             border-bottom: 1px solid var(--border-color);
             font-weight: 600;
         }
-        .cheatsheet-section > h2.collapsible-header.collapsed {
-            margin-bottom: 0; /* No bottom margin when section is collapsed */
-        }
         
-        .subsection-title { /* Style for sub-headers within a collapsible section */
-            font-size: 1.6rem;
-            color: var(--heading-color);
-            margin-top: 30px;
-            margin-bottom: 20px;
-            font-weight: 500;
-            opacity: 0.9;
-            padding-left: 10px; /* Indent slightly */
-            border-left: 3px solid var(--accent-color);
-        }
-
         .grid-container {
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 20px;
@@ -56,14 +39,6 @@
 
         .card { /* Override from base-theme.css if needed */
             padding: 20px;
-        }
-
-        .card h3 { /* Title for the resource inside a card */
-            font-size: 1.2rem;
-        }
-        
-        .card p { /* Description text for the resource */
-            /* flex-grow: 1; from base-theme.css */
         }
 
         .button {
@@ -231,6 +206,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
+    <button id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/base-theme.css">
     <link rel="stylesheet" href="css/extended-header.css">
     <link rel="stylesheet" href="css/collapsible.css">
+    <link rel="stylesheet" href="css/shared-styles.css">
     <style>
         /* Page-specific styles for index.html */
         .container {
@@ -34,27 +35,6 @@
         .card .go-to-link::after {
             content: ' →';
         }
-
-        /* Styles for the new section */
-        .cheatsheet-section {
-            margin-bottom: 40px;
-            background-color: var(--card-bg-color); /* Match card background for the section */
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 4px 6px var(--shadow-color);
-        }
-
-        .cheatsheet-section > h2.collapsible-header { /* Style for the main collapsible header in this section */
-            font-size: 1.5rem; /* Adjusted for index page context */
-            color: var(--heading-color);
-            margin-bottom: 20px; /* This margin is applied when it's open */
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-            font-weight: 600;
-        }
-        .cheatsheet-section > h2.collapsible-header.collapsed {
-             margin-bottom: 0; /* No bottom margin when collapsed, relies on section's margin */
-        }
         
         /* Ensure cards within the new section use the global card styling but adjust grid if needed */
         .cheatsheet-section .grid-container {
@@ -66,19 +46,6 @@
         }
         .cheatsheet-section .card h3 {
             font-size: 1.15rem; /* Slightly smaller heading for nested cards */
-        }
-        .cheatsheet-section .card ul {
-            list-style-position: inside;
-            padding-left: 0; /* Reset padding if needed */
-            margin-bottom: 10px;
-        }
-        .cheatsheet-section .card code { /* Style for inline code if any */
-            font-family: "Fira Code", "Courier New", monospace;
-            background-color: var(--bg-color); /* Slightly different from code block bg */
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            color: var(--text-color); /* Ensure inline code text color contrasts with its bg */
         }
 
         /* Change visited link text to white on the homepage */
@@ -98,41 +65,6 @@
             margin-top: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 4px var(--shadow-color);
-        }
-
-        .card img.img-large {
-            max-width: 80%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .main-section-header {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        .main-section-header h2 {
-            font-size: 2rem;
-            color: var(--heading-color);
-        }
-
-        /* Instruction Step Styling */
-        .instruction-step {
-            border-left: 4px solid var(--accent-color);
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .instruction-step h3 {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -239,6 +171,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
+    <button id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
 </body>
 </html>

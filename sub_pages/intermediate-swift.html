@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/extended-header.css">
     <link rel="stylesheet" href="../css/collapsible.css">
     <link rel="stylesheet" href="../css/code-styles.css">
+    <link rel="stylesheet" href="../css/shared-styles.css">
     <style>
         /* Page-specific styles for bootcamp-snippets.html */
         .logo {
@@ -28,10 +29,6 @@
             max-width: 700px;
         }
 
-        .cheatsheet-section {
-            margin-bottom: 40px;
-        }
-
         .cheatsheet-section>h2.collapsible-header {
             /* Style for the main collapsible header */
             font-size: 2rem;
@@ -43,24 +40,6 @@
             font-weight: 600;
         }
 
-        .cheatsheet-section>h2.collapsible-header.collapsed {
-            margin-bottom: 0;
-            /* No bottom margin when section is collapsed */
-        }
-
-        .subsection-title {
-            /* Style for sub-headers within a collapsible section */
-            font-size: 1.6rem;
-            color: var(--heading-color);
-            margin-top: 30px;
-            margin-bottom: 20px;
-            font-weight: 500;
-            opacity: 0.9;
-            padding-left: 10px;
-            /* Indent slightly */
-            border-left: 3px solid var(--accent-color);
-        }
-
         .grid-container {
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 20px;
@@ -69,11 +48,6 @@
         .card {
             /* Override from base-theme.css if needed */
             padding: 20px;
-        }
-
-        .card h3 {
-            /* Title for the code snippet/step inside a card */
-            font-size: 1.2rem;
         }
 
         .card ul {
@@ -97,85 +71,18 @@
             color: white;
         }
 
-        .card p {
-            /* Description text for the snippet */
-            /* flex-grow: 1; from base-theme.css */
-        }
-
         pre {
             /* Override from code-styles.css if needed */
             margin-bottom: 10px;
             /* Reduced margin for snippets */
         }
 
-        /* Inline code styling, if not covered by global code in code-styles.css */
-        body code:not(pre code) {
-            font-family: "Fira Code", "Courier New", monospace;
-            background-color: var(--bg-color);
-            /* Match page background */
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            color: var(--text-color);
-            /* Ensure contrast */
-        }
-
         .challenge-criteria li {
             margin-bottom: 10px;
         }
 
-        .instruction-step img {
-            width: 100%;
-            max-width: 100%;
-            margin-top: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px var(--shadow-color);
-        }
-
         .instruction-step.card {
             padding: 20px;
-        }
-
-        /* Instruction Step Styling */
-        .instruction-step {
-            border-left: 4px solid var(--accent-color);
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .instruction-step h3 {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-
-        .card img.img-large {
-            max-width: 80%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .card img.img-small {
-            max-width: 50%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .main-section-header {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        .main-section-header h2 {
-            font-size: 2rem;
-            color: var(--heading-color);
         }
     </style>
 </head>
@@ -782,7 +689,7 @@ print(password)</code></pre>
     </footer>
 
     <script src="../js/main.js"></script>
-    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
+    <button id="scrollToTopBtn" class="scroll-to-top-button" title="Go to top">⬆️</button>
 </body>
 
 </html>
